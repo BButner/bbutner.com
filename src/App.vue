@@ -72,6 +72,10 @@ export default class App extends Vue {
   mounted () {
     window.addEventListener('scroll', this.handleScroll)
     this.scrolled = window.scrollY > 0
+
+    if (window.innerWidth < 1024) {
+      this.showLinks = false
+    }
   }
 }
 </script>
