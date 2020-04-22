@@ -65,11 +65,21 @@ export default class App extends Vue {
   }
 
   @Emit()
+  handleResize () {
+    if (window.innerWidth < 1024) {
+      this.showLinks = false
+    } else {
+      this.showLinks = true
+    }
+  }
+
+  @Emit()
   homepage () {
     return router.currentRoute.path === '/'
   }
 
   mounted () {
+    window.addEventListener('resize', this.handleResize)
     window.addEventListener('scroll', this.handleScroll)
     this.scrolled = window.scrollY > 0
 
