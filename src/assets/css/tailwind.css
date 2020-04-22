@@ -23,4 +23,8 @@
         color: black;
         -webkit-text-stroke: 1px black;
     }
+
+    .animated {
+        @apply transition duration-200 ease-in-out;
+    }
 }

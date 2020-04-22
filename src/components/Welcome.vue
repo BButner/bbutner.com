@@ -18,6 +18,3 @@ import { Component, Vue } from 'vue-property-decorator'
 export default class Welcome extends Vue {
 }
 </script>
-
-<style scoped>
-</style>
