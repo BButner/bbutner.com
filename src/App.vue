@@ -42,14 +42,20 @@
       </div>
     </nav>
     <router-view/>
+    <Footer :navLinks="links"/>
   </div>
 </template>
 
 <script lang="ts">
 import { Component, Vue, Emit } from 'vue-property-decorator'
+import Footer from '@/components/Footer.vue'
 import router from '@/router'
 
-@Component
+@Component({
+  components: {
+    Footer
+  }
+})
 export default class App extends Vue {
   private showLinks = true
   private scrolled = false

@@ -30,7 +30,7 @@ export default class Languages extends Vue {
       icon: 'fa-database'
     },
     {
-      title: 'Web',
+      title: 'Full Stack Web',
       icon: 'fa-code'
     }
   ]
