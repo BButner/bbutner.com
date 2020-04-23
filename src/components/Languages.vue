@@ -7,7 +7,7 @@
       <div class="w-full flex flex-wrap justify-center lg:w-2/5">
         <div v-for="lang in languages" :key="lang.title"
           class="w-3/5 mb-10 lg:mb-0 lg:w-2/6 pt-20 pb-20 animated m-10">
-          <div class="icon text-primary-500"><i class="fas text-6xl" :class="[lang.icon]"></i></div>
+          <div class="icon text-primary-300"><i class="fas text-6xl" :class="[lang.icon]"></i></div>
           <div class="text-xl mt-5">{{ lang.title }}</div>
         </div>
       </div>
