@@ -1,10 +1,13 @@
 <template>
-    <div class="flex flex-wrap m-auto justify-around text-gray-700 wrapper lg:w-1/2 mt-64 mb-64">
+    <div class="mt-32">
+      <p class="w-3/5 text-4xl text-gray-700 skills lg:w-1/5 m-auto">Skills</p>
+      <div class="flex flex-wrap m-auto justify-around text-gray-700 wrapper lg:w-1/2 mt-32 mb-64">
         <div v-for="skill in skills" :key="skill.title"
           class="w-4/6 mb-20 lg:mb-0 lg:w-2/5 pt-20 pb-20 border-gray-600 border-2 rounded-lg hover:bg-gray-600 hover:text-white animated m-10">
             <div class="icon"><i class="fas text-6xl" :class="[skill.icon]"></i></div>
             <div class="text-xl">{{ skill.title }}</div>
         </div>
+      </div>
     </div>
 </template>
 
@@ -45,5 +48,9 @@ export default class Skills extends Vue {
 <style scoped>
 .icon {
     height: 90%;
+}
+
+.skills {
+  border-bottom: 2px solid #42b362;
 }
 </style>

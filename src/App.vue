@@ -9,7 +9,7 @@
         :class="{
             'lg:text-gray-800': !scrolled
         }">
-        <router-link to="/" class="font-semibold text-xl tracking-tight hover:text-gray-300 animated">Beau Butner</router-link>
+        <span to="/" class="font-semibold text-xl tracking-tight">Beau Butner</span>
       </div>
       <div class="block lg:hidden">
         <button class="flex items-center px-3 py-2 border rounded text-white border-primary-100 hover:text-white hover:border-white" @click="showLinks = !showLinks">
@@ -25,7 +25,8 @@
           }">
           <router-link class="block mt-4 lg:inline-block lg:mt-0 hover:text-white lg:mr-4 animated" v-for="link in links" :to="'/' + link.toLowerCase().replace('home', '')" :key="link"
           :class="{
-            'lg:hover:text-gray-400': !scrolled
+            'lg:hover:text-gray-400': !scrolled,
+            'lg:border-primary-500': !scrolled
           }">{{ link }}</router-link>
         </div>
         <div>
@@ -53,7 +54,7 @@ export default class App extends Vue {
   private showLinks = true
   private scrolled = false
   private router = router
-  private links: string[] = ['HOME', 'ABOUT', 'BLOG', 'CONTACT', 'PROJECTS']
+  private links: string[] = ['HOME', 'ABOUT', 'BLOG', 'PROJECTS', 'CONTACT']
 
   @Emit()
   handleScroll () {
@@ -96,5 +97,9 @@ export default class App extends Vue {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
+}
+
+.router-link-exact-active {
+  border-bottom: 1px solid white;
 }
 </style>
