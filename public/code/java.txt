@@ -1,0 +1,23 @@
+public class Experience {
+    private int years;
+    private String background;
+
+    public Experience(int years, String background) {
+        this.years = years;
+        this.background = background;
+    }
+
+    public int getYears() {
+        return this.years;
+    }
+
+    public String getBackground() {
+        return this.background;
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Experience exp = new Experience(4, "Heavy OOP, Learning Reactor");
+    }
+}

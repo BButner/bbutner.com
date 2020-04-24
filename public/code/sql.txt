@@ -1,0 +1,6 @@
+create table #experience (experience smallint, background varchar(250))
+
+insert into #experience VALUES(
+  4,
+  'Data Analysis, Schema Creation/Analysis, Normalization'
+)

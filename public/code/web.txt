@@ -1,0 +1,11 @@
+class Experience {
+  years: number;
+  background: string;
+
+  constructor(years: number, background: string) {
+    this.years = years;
+    this.background = background;
+  }
+}
+
+let experience = new Experience(0.5, "VueJS/VueCLI, NodeJS, Tailwind, Axios, Express");

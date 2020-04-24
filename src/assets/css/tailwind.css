@@ -27,4 +27,16 @@
     .animated {
         @apply transition duration-200 ease-in-out;
     }
+
+    .ib {
+
+    }
+
+    .ib pre[class*="language-"] {
+        display: inline-block;
+    }
+    
+    .ib pre[class*="language-"] > code {
+        display: inline-block;
+    }
 }
