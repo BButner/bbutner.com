@@ -18,6 +18,6 @@ public class Experience {
 
 public class Main {
     public static void main(String[] args) {
-        Experience exp = new Experience(4, "Heavy OOP, Learning Reactor");
+        Experience exp = new Experience(4, "OOP, Longest Experience");
     }
 }

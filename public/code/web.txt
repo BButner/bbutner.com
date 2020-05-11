@@ -8,4 +8,4 @@ class Experience {
   }
 }
 
-let experience = new Experience(0.5, "VueJS/VueCLI, NodeJS, Tailwind, Axios, Express");
+let experience = new Experience(0.5, "VueJS/VueCLI, NodeJS, Tailwind, Axios, Express, NEXT.JS, React");
