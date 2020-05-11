@@ -40,3 +40,7 @@
         display: inline-block;
     }
 }
+
+.language-javascript {
+  display: block !important;
+}

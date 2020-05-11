@@ -6,10 +6,12 @@ import './assets/css/tailwind.css'
 import '../node_modules/vue-code-highlight/themes/window.css'
 import '../node_modules/vue-code-highlight/themes/prism-tomorrow.css'
 import VueCodeHightlight from 'vue-code-highlight'
+import VueScrollTo from 'vue-scrollto'
 
 Vue.config.productionTip = false
 
 Vue.use(VueCodeHightlight)
+Vue.use(VueScrollTo)
 
 new Vue({
   router,

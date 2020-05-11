@@ -25,11 +25,11 @@
     </div>
     <br>
     <p class="text-2xl">My education is as follows:</p>
-    <div class="pl-6 hidden lg:block">
+    <div class="pl-6 hidden lg:block mb-10">
       <div class="flex inline-block items-center pt-4 text-xl"><div class="flex mr-4"><i class="fas fa-check-circle text-2xl text-green-500"></i></div>Danville Area Community College<span class="text-primary-500 text-2xl">|</span>Associates in Applied Sciences<span class="text-primary-500 text-2xl">|</span>2016-2018</div>
       <div class="flex inline-block items-center pt-4 text-xl"><div class="flex mr-4"><i class="fas fa-dot-circle text-2xl text-yellow-500 in-progress"></i></div>Southern Illinois University<span class="text-primary-500 text-2xl">|</span>Bachelors in Information Systems Technologies<span class="text-primary-500 text-2xl">|</span>2018-2020</div>
     </div>
-    <div class="lg:hidden text-xl">
+    <div class="lg:hidden text-xl mb-10">
       <div class="pt-6">
         <i class="fas fa-check-circle text-4xl text-green-500 pb-4"></i>
         <div>
@@ -47,6 +47,28 @@
         </div>
       </div>
     </div>
+    <p class="text-2xl">Here are the technologies that I am familiar with:</p>
+    <div class="pt-4 pl-6 text-xl technologies mb-10">
+      <div><img src="../../public/images/vue.png" alt="">VueJS/VueCLI</div>
+      <div><img src="../../public/images/react.png" alt="">React</div>
+      <div><img src="../../public/images/node.png" alt="">NodeJS</div>
+      <div><img src="../../public/images/typescript.png" alt="">TypeScript</div>
+      <div><img src="../../public/images/mongodb.png" alt="">MongoDB</div>
+      <div><img src="../../public/images/mssql.png" alt="">MSSQL</div>
+      <div><img src="../../public/images/vercel.png" alt="">Next.JS</div>
+      <div><img src="../../public/images/java.png" alt="">Java</div>
+      <div><img src="../../public/images/csharp.png" alt="">C#</div>
+      <div><img src="../../public/images/python.png" alt="">Python</div>
+      <div><img src="../../public/images/jira.png" alt="">JIRA</div>
+    </div>
+    <p class="text-2xl">And here is what I use when coding!</p>
+    <div class="pt-4 pl-6 text-xl coding mb-10 technologies">
+      <div><img src="../../public/images/intellij.png" alt="">IntelliJ IDEA</div>
+      <div><img src="../../public/images/webstorm.png" alt="">WebStorm</div>
+      <div><img src="../../public/images/vscode.png" alt="">Visual Studio Code</div>
+      <div><img src="../../public/images/visualstudio.png" alt="">Visual Studio</div>
+    </div>
+    <p class="text-3xl mt-32" id="contact">Want to get in touch with me? Feel free to contact me at <span class="text-primary-500 hover:text-primary-900 animated"><a href="mailto:beau@bbutner.com">beau@bbutner.com</a></span>!</p>
   </div>
 </template>
 
@@ -65,6 +87,15 @@
   div span {
     @apply ml-1;
     @apply mr-1;
+  }
+
+  .technologies > div {
+    @apply flex;
+    @apply pt-2;
+  }
+
+  .technologies img {
+    @apply pr-4;
   }
 
   .in-progress {

@@ -1,6 +1,6 @@
 <template>
   <div id="app" class="text-gray-900">
-    <nav class="fixed top-0 left-0 flex items-center justify-between flex-wrap p-6 w-4/4 z-50 bg-primary-500 w-screen animated"
+    <nav class="fixed top-0 left-0 flex items-center justify-between flex-wrap p-6 w-4/4 z-50 bg-primary-500 w-screen animated" id="nav"
       :class="{
         'lg:bg-primary-500': scrolled,
         'lg:bg-transparent': !scrolled
@@ -23,11 +23,11 @@
             'lg:text-left': !scrolled,
             'lg:ml-20': !scrolled
           }">
-          <router-link class="block mt-4 lg:inline-block lg:mt-0 hover:text-white lg:mr-4 animated" v-for="link in links" :to="'/' + link.toLowerCase().replace('home', '')" :key="link"
+          <router-link v-for="link in links" :key="link.title" class="block mt-4 lg:inline-block lg:mt-0 hover:text-white lg:mr-4 animated" :to="link.href" v-scroll-to="link.scrollTo"
           :class="{
             'lg:hover:text-gray-400': !scrolled,
             'lg:border-primary-500': !scrolled
-          }">{{ link }}</router-link>
+          }">{{ link.title }}</router-link>
         </div>
         <div>
           <a href="https://www.github.com/BButner" class="inline-block text-sm px-4 py-2 leading-none border rounded text-white border-white hover:border-transparent hover:text-primary-500 hover:bg-white mt-4 lg:mt-0 animated"
@@ -47,7 +47,7 @@
 </template>
 
 <script lang="ts">
-import { Component, Vue, Emit } from 'vue-property-decorator'
+import { Component, Vue, Emit, Watch } from 'vue-property-decorator'
 import Footer from '@/components/Footer.vue'
 import router from '@/router'
 
@@ -60,7 +60,23 @@ export default class App extends Vue {
   private showLinks = true
   private scrolled = false
   private router = router
-  private links: string[] = ['HOME', 'ABOUT', 'BLOG', 'PROJECTS', 'CONTACT']
+  private links = [
+    {
+      title: 'HOME',
+      href: '/',
+      scrollTo: '#nav'
+    },
+    {
+      title: 'ABOUT',
+      href: '/about',
+      scrollTo: '#nav'
+    },
+    {
+      title: 'CONTACT',
+      href: '/about#contact',
+      scrollTo: '#contact'
+    }
+  ]
 
   @Emit()
   handleScroll () {
