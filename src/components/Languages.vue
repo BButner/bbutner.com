@@ -16,7 +16,7 @@
     <div class="fixed top-0 text-xs left-0 lg:relative w-full m-auto pt-10 pb-10 flex justify-center mt-32 lg:mt-0 lg:text-sm" v-if="selectedId.length > 0">
       <div class="wrapper w-5/6">
         <div @click="resetCodeDisplay()">
-          <i class="far fa-times-circle text-5xl mb-5 text-gray-700 cursor-pointer animated hover:text-gray-500"></i>
+          <i class="far fa-times-circle text-5xl mb-5 text-gray-700 cursor-pointer animated hover:text-gray-500 bg-gray-100 rounded-full p-1"></i>
         </div>
         <div class="">
           <vue-code-highlight class="lg:ib">

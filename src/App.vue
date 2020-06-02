@@ -45,7 +45,7 @@
 </template>
 
 <script lang="ts">
-import { Component, Vue, Emit, Watch } from 'vue-property-decorator'
+import { Component, Vue, Emit } from 'vue-property-decorator'
 import Footer from '@/components/Footer.vue'
 import router from '@/router'
 
