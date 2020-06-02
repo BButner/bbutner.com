@@ -17,11 +17,9 @@
         </button>
       </div>
       <div class="w-full block flex-grow lg:flex lg:items-center lg:w-auto" v-if="showLinks">
-        <div class="text-sm lg:flex-grow justify-center text-center font-semibold text-gray-300"
+        <div class="text-sm lg:flex-grow justify-center text-center lg:text-left lg:ml-20 font-semibold text-gray-300"
           :class="{
-            'lg:text-gray-600': !scrolled,
-            'lg:text-left': !scrolled,
-            'lg:ml-20': !scrolled
+            'lg:text-gray-600': !scrolled
           }">
           <router-link v-for="link in links" :key="link.title" class="block mt-4 lg:inline-block lg:mt-0 hover:text-white lg:mr-4 animated" :to="link.href" v-scroll-to="link.scrollTo"
           :class="{
