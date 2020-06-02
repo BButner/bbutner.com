@@ -2,7 +2,8 @@
   <nav class="fixed top-0 left-0 flex items-center justify-between flex-wrap p-6 w-4/4 z-50 bg-primary-500 w-screen animated" id="nav"
     :class="{
       'lg:bg-primary-500': scrolled,
-      'lg:bg-transparent': !scrolled
+      'lg:bg-transparent': !scrolled,
+      'soft-shadow': scrolled
     }">
     <div class="flex items-center flex-shrink-0 text-white"
       :class="{

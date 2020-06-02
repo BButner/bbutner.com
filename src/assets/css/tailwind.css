@@ -39,6 +39,10 @@
     .ib pre[class*="language-"] > code {
         display: inline-block;
     }
+
+    .soft-shadow {
+        box-shadow: 0 4px 10px 0 hsla(0, 0%, 0%, 0.2);
+    }
 }
 
 .language-javascript {
