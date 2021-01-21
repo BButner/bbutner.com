@@ -42,8 +42,8 @@ export const SectionSplash: FunctionComponent = () => {
           <img className="w-32 h-32 md:w-52 md:h-52 rounded-full m-auto" src="/img/avatar_small.png" />
         </motion.ul>
         <motion.ul initial="hidden" animate="visible" variants={titleVariants} className="flex justify-center text-6xl md:text-8xl">
-          {nameArray.map(char => {
-            return <motion.li variants={titleVariants}>{char === ' ' ? '\u00a0' : char}</motion.li>
+          {nameArray.map((char, index) => {
+            return <motion.li key={index} variants={titleVariants}>{char === ' ' ? '\u00a0' : char}</motion.li>
           })}
         </motion.ul>
         <motion.ul initial="hidden" animate="visible" variants={positionVariants} className="flex justify-center space-x-2 md:space-x-8 text-xl text-center md:text-left md:text-5xl text-gray-800">
