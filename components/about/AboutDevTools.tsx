@@ -3,17 +3,14 @@ import Image from 'next/image'
 import { motion } from 'framer-motion'
 import { motionFadeInX } from '../../lib/util/GenericAnimations'
 import { useIntersection } from 'react-use'
+import devTools from '../../lib/data/devtools.json'
 
 export interface DevTool {
   title: string;
   img: string;
 }
 
-type AboutDevToolsProps = {
-  devTools: DevTool[];
-}
-
-export const AboutDevTools: FunctionComponent<AboutDevToolsProps> = ({ devTools }) => {
+export const AboutDevTools: FunctionComponent = () => {
   const devToolsRef = useRef(null)
   const THRESHOLD: number = 0.5
   const [animated, setAnimated] = useState<boolean>(false)
@@ -36,7 +33,7 @@ export const AboutDevTools: FunctionComponent<AboutDevToolsProps> = ({ devTools 
       className="space-y-4"
     >
       <motion.li variants={devToolsVariants} className="mb-8"><p>These are the development tools that I regularly use:</p></motion.li>
-      {devTools.map(tool => {
+      {devTools.devTools.map(tool => {
         return <motion.li className="text-xl md:text-2xl flex space-x-4 items-center ml-6" key={tool.title} variants={devToolsVariants}>
           <Image src={tool.img} height={32} width={32} />
           <p>{tool.title}</p>

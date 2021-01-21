@@ -3,17 +3,14 @@ import Image from 'next/image'
 import { useIntersection } from 'react-use'
 import { motion } from 'framer-motion'
 import { motionFadeInX } from '../../lib/util/GenericAnimations'
+import technologies from '../../lib/data/technologies.json'
 
 export interface Technology {
   title: string;
   img: string;
 }
 
-type AboutTechnologiesProps = {
-  technologies: Technology[];
-}
-
-export const AboutTechnologies: FunctionComponent<AboutTechnologiesProps> = ({ technologies }) => {
+export const AboutTechnologies: FunctionComponent = () => {
   const technologyRef = useRef(null)
   const THRESHOLD: number = 0.5
   const [animated, setAnimated] = useState<boolean>(false)
@@ -36,7 +33,7 @@ export const AboutTechnologies: FunctionComponent<AboutTechnologiesProps> = ({ t
         onAnimationComplete={intersection && intersection.intersectionRatio > THRESHOLD ? () => {setAnimated(true)} : () => {}}
       >
         <motion.li variants={techVariants} className="mb-8"><p>These are the development technologies that I am familiar with:</p></motion.li>
-        {technologies.map((tech, index) => {
+        {technologies.technologies.map((tech, index) => {
           return <motion.li key={tech.title} className="text-xl md:text-2xl flex space-x-4 items-center ml-6" variants={techVariants}>
             <Image src={tech.img} height={32} width={32} />
             <p>{tech.title}</p>

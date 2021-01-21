@@ -25,9 +25,9 @@ const about: FunctionComponent<AboutProps> = ({ technologies, devTools }) => {
         <br />
         <AboutEducation />
         <br />
-        <AboutTechnologies technologies={technologies} />
+        <AboutTechnologies />
         <br />
-        <AboutDevTools devTools={devTools} />
+        <AboutDevTools />
         <br />
         <div className="mt-8 mb-20 w-full">
           <p>Want to get in touch with me? Shoot me an email at <span className="text-purple-500"><a href="mailto:beau@bbutner.com">beau@bbutner.com</a></span>!</p>
@@ -38,15 +38,3 @@ const about: FunctionComponent<AboutProps> = ({ technologies, devTools }) => {
 }
 
 export default about
-
-export const getStaticProps: GetStaticProps<AboutProps> = async () => {
-  const technologies = await (await fetch(process.env.NODE_ENV === 'development' ? 'http://localhost:3000/technologies.json' : 'https://bbutner.com/technologies.json')).json()
-  const devTools = await (await fetch(process.env.NODE_ENV === 'development' ? 'http://localhost:3000/devtools.json' : 'https://bbutner.com/devtools.json')).json()
-
-  return {
-    props: {
-      technologies: technologies.technologies,
-      devTools: devTools.devTools
-    }
-  }
-}
