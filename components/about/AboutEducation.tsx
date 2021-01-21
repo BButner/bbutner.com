@@ -27,13 +27,13 @@ export const AboutEducation: FunctionComponent = () => {
       onAnimationComplete={intersection && intersection.intersectionRatio > THRESHOLD ? () => {setAnimated(true)} : () => {}}
     >
       <p>My education is as follows:</p>
-      <motion.li variants={educationVariants} className="flex justify-between items-center text-2xl mb-4 mt-8 ml-6">
-        <p className="flex items-center"><Icon path={mdiCheck} size={1.25} className="text-green-500 mr-4" />Danville Area Community College</p>
+      <motion.li variants={educationVariants} className="md:flex md:justify-between md:items-center text-xl md:text-2xl mb-4 mt-8 md:ml-6">
+        <p className="md:flex text-gray-700 items-center"><Icon path={mdiCheck} size={1.25} className="hidden md:block text-green-500 md:mr-4" />Danville Area Community College</p>
         <p>Associates in Applied Aciences</p>
         <p className="text-gray-500">2016-2018</p>
       </motion.li>
-      <motion.li variants={educationVariants} className="flex justify-between items-center text-2xl ml-6">
-        <p className="flex items-center"><Icon path={mdiCheck} size={1.25} className="text-green-500 mr-4" />Southern Illinois University - Carbondale</p>
+      <motion.li variants={educationVariants} className="md:flex md:justify-between md:items-center text-xl md:text-2xl md:ml-6">
+        <p className="md:flex text-gray-700 items-center"><Icon path={mdiCheck} size={1.25} className="hidden md:block text-green-500 md:mr-4" />Southern Illinois University - Carbondale</p>
         <p>Bachelors in Information Systems Technologies</p>
         <p className="text-gray-500">2018-2020</p>
       </motion.li>

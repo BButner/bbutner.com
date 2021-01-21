@@ -44,7 +44,7 @@ export const AboutAttributes: FunctionComponent = () => {
       >
         <motion.li variants={attributeVariants} className="mb-8"><p>In my work, I take pride in the following attributes:</p></motion.li>
         {attributes.map(attr => {
-          return <motion.li className="flex items-center text-2xl space-x-4 ml-6" key={attr.icon} variants={attributeVariants}>
+          return <motion.li className="flex items-center md:justify-start text-xl md:text-2xl space-x-4 md:ml-6 text-left" key={attr.icon} variants={attributeVariants}>
             <AboutAttributeIcon icon={attr.icon} />
             <p>{attr.description}</p>
           </motion.li>

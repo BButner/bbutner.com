@@ -1,3 +1,4 @@
+import { motion } from 'framer-motion'
 import { GetStaticProps } from 'next'
 import { FunctionComponent } from 'react'
 import { AboutAttributes } from '../components/about/AboutAttributes'
@@ -15,9 +16,9 @@ type AboutProps = {
 const about: FunctionComponent<AboutProps> = ({ technologies, devTools }) => {
   return (
     <Layout pageTitle="About">
-      <div className="w-2/3 m-auto text-gray-800 text-4xl">
-        <p className="mt-32 text-7xl mb-4">About Me</p>
-        <div className="bg-gradient-to-br from-red-400 to-yellow-600 w-1/2 h-2 mb-10" />
+      <div className="w-3/4 md:w-2/3 m-auto text-gray-800 text-3xl md:text-4xl text-center md:text-left">
+        <p className="mt-32 text-5xl md:text-7xl mb-4">About Me</p>
+        <div className="bg-gradient-to-br from-red-400 to-yellow-600 md:w-1/2 h-2 mb-10" />
         <AboutInfo />
         <br />
         <AboutAttributes />
@@ -27,6 +28,10 @@ const about: FunctionComponent<AboutProps> = ({ technologies, devTools }) => {
         <AboutTechnologies technologies={technologies} />
         <br />
         <AboutDevTools devTools={devTools} />
+        <br />
+        <div className="mt-8 mb-20 w-full">
+          <p>Want to get in touch with me? Shoot me an email at <span className="text-purple-500"><a href="mailto:beau@bbutner.com">beau@bbutner.com</a></span>!</p>
+        </div>
       </div>
     </Layout>
   )

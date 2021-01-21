@@ -91,9 +91,9 @@ export const Navbar: FunctionComponent = () => {
           <motion.li variants={linkVariants}>
             <Link href="/"><a><p>Home</p></a></Link>
           </motion.li>
-          <motion.li variants={linkVariants}>
+          {/* <motion.li variants={linkVariants}>
             <Link href="/projects"><a><p>Projects</p></a></Link>
-          </motion.li>
+          </motion.li> */}
           <motion.li variants={linkVariants}>
             <Link href="/about"><a><p>About</p></a></Link>
           </motion.li>
