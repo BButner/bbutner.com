@@ -1,0 +1,50 @@
+.hamburger-wrapper {
+  div {
+    transition: opacity 250ms ease, transform 250ms ease, width 250ms ease, background-color 250ms ease;   
+
+    &:nth-child(1), &:nth-child(3) {
+      transform-origin: 0%;
+    }
+  }
+
+  &:hover {
+    cursor: pointer;
+
+    @extend .hamburger-wrapper-active;
+  }
+
+  &-active {
+    div:nth-child(1) {
+      transform: rotate(45deg);
+      width: 34px;
+    }
+    div:nth-child(2) {
+      opacity: 0;
+    }
+    div:nth-child(3) {
+      transform: rotate(-45deg);
+      width: 34px;
+    }
+  }
+
+  &-open {
+    @extend .hamburger-wrapper-active;
+    div {
+      @apply bg-red-500;
+    }
+    &:hover div {
+      @apply bg-red-800;
+    }
+  }
+}
+
+.nav-links li {
+  p {
+    transition: transform 250ms ease;
+    cursor: pointer;
+  }
+  &:hover p {
+    transform: translateX(10px);
+  }
+}
+

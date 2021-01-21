@@ -1,0 +1,14 @@
+{
+  "technologies": [
+    { "title": "C#", "img": "/img/csharp.png" },
+    { "title": "Java", "img": "/img/java.png" },
+    { "title": "MongoDB", "img": "/img/mongodb.png" },
+    { "title": "MSSQL", "img": "/img/mssql.png" },
+    { "title": "Next.JS/Vercel", "img": "/img/vercel.png" },
+    { "title": "Node", "img": "/img/node.png" },
+    { "title": "Python", "img": "/img/python.png" },
+    { "title": "React", "img": "/img/react.png" },
+    { "title": "TypeScript", "img": "/img/typescript.png" },
+    { "title": "VueJS/VueCLI", "img": "/img/vue.png" }
+  ]
+}

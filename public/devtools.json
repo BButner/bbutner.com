@@ -1,0 +1,9 @@
+{
+  "devTools": [
+    { "title": "IntelliJ", "img": "/img/intellij.png" },
+    { "title": "Visual Studio", "img": "/img/visualstudio.png" },
+    { "title": "VSCode", "img": "/img/vscode.png" },
+    { "title": "JIRA", "img": "/img/jira.png" },
+    { "title": "WebStorm", "img": "/img/webstorm.png" }
+  ]
+}
