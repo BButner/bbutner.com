@@ -39,7 +39,7 @@ export const Navbar: FunctionComponent = () => {
       <button
         onClick={(): void => setNavVisible(!navVisible)}
         className={clsx(
-          "w-8 h-8 fixed mb-4 m-auto z-40 mt-4 ml-4",
+          "w-8 h-8 fixed mb-4 m-auto z-40 mt-4 ml-4 top-0 left-0",
           styles['hamburger-wrapper'],
           navVisible ? styles['hamburger-wrapper-open'] : ''
         )}
