@@ -1,6 +1,4 @@
 import { FunctionComponent } from 'react'
-import Icon from '@mdi/react'
-import { mdiChevronUp, mdiChevronDown } from '@mdi/js'
 import { motion, useCycle, useAnimation, useViewportScroll } from 'framer-motion'
 import styles from './ScrollProgress.module.scss'
 
@@ -21,7 +19,7 @@ export const ScrollProgress: FunctionComponent = () => {
   return (
     <div className={`${styles['scroll-progress-wrapper']} w-8 z-50 bg-white rounded-3xl shadow-3xl ml-4 mt-20`}>
       <motion.div whileTap={{ scale: 0.9 }} onClick={handleArrowUpClick}>
-        <Icon path={mdiChevronUp} size={1.25} className={`${styles['nav-arrow']} w-8`} />
+        {/* <Icon path={mdiChevronUp} size={1.25} className={`${styles['nav-arrow']} w-8`} /> */}
       </motion.div>
       <div className={`${styles['scroll-progress']}`}>
         <svg className="w-8">
@@ -37,7 +35,7 @@ export const ScrollProgress: FunctionComponent = () => {
         </svg>
       </div>
       <motion.div whileTap={{ scale: 0.9 }} onClick={handleArrowDownClick}>
-        <Icon path={mdiChevronDown} size={1.25} className={`${styles['nav-arrow']}`} />
+        {/* <Icon path={mdiChevronDown} size={1.25} className={`${styles['nav-arrow']}`} /> */}
       </motion.div>
     </div>
   )
