@@ -1,12 +1,9 @@
-import { motion } from 'framer-motion'
-import { GetStaticProps } from 'next'
 import { FunctionComponent } from 'react'
 import { AboutAttributes } from '../components/about/AboutAttributes'
 import { AboutDevTools, DevTool } from '../components/about/AboutDevTools'
 import { AboutEducation } from '../components/about/AboutEducation'
 import { AboutInfo } from '../components/about/AboutInfo'
 import { AboutTechnologies, Technology } from '../components/about/AboutTechnologies'
-import { AboutVSCode } from '../components/about/AboutVSCode'
 import { Layout } from '../components/layout'
 
 type AboutProps = {
