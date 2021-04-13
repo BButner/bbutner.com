@@ -49,6 +49,7 @@ export const Navbar: FunctionComponent = () => {
         <div className={`h-1 w-8 ${navVisible ? 'bg-white' : 'bg-black'} rounded-full mb-2 m-auto`}></div>
         <div className={`h-1 w-8 ${navVisible ? 'bg-white' : 'bg-black'} rounded-full m-auto`}></div>
       </button>
+      <ScrollProgress />
       <Transition
         show={navVisible}
         as={Fragment}

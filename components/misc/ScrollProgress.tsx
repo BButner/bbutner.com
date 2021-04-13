@@ -1,12 +1,10 @@
 import { FunctionComponent } from 'react'
 import { motion, useCycle, useAnimation, useViewportScroll } from 'framer-motion'
-import styles from './ScrollProgress.module.scss'
+import { ChevronUpIcon, ChevronDownIcon } from '@heroicons/react/outline'
+import clsx from 'clsx'
 
 export const ScrollProgress: FunctionComponent = () => {
   const { scrollYProgress } = useViewportScroll()
-  const arrowUpControls = useAnimation()
-  const arrowDownControls = useAnimation()
-  const [x, cycleX] = useCycle(0, -10, 10, -10, 10)
 
   const handleArrowUpClick = (): void => {
     window.scrollTo(0, 0)
@@ -16,27 +14,36 @@ export const ScrollProgress: FunctionComponent = () => {
     window.scrollTo(0, document.body.scrollHeight)
   }
 
+  const iconClassNames = clsx(
+    'w-7 h-7 transition duration-200 transform hover:scale-125'
+  )
+  const buttonClassNames = clsx(
+    'w-8 h-8 flex justify-center'
+  )
+
   return (
-    <div className={`${styles['scroll-progress-wrapper']} w-8 z-50 bg-white rounded-3xl shadow-3xl ml-4 mt-20`}>
-      <motion.div whileTap={{ scale: 0.9 }} onClick={handleArrowUpClick}>
-        {/* <Icon path={mdiChevronUp} size={1.25} className={`${styles['nav-arrow']} w-8`} /> */}
-      </motion.div>
-      <div className={`${styles['scroll-progress']}`}>
-        <svg className="w-8">
-          <motion.path
-            className="stroke-current text-purple-400"          
-            strokeWidth="3"
-            stroke="black"
-            d="M 10,0 L 10, 100"
-            style={{
-              pathLength: scrollYProgress
-            }}
-          />
-        </svg>
-      </div>
-      <motion.div whileTap={{ scale: 0.9 }} onClick={handleArrowDownClick}>
-        {/* <Icon path={mdiChevronDown} size={1.25} className={`${styles['nav-arrow']}`} /> */}
-      </motion.div>
+    <div className="fixed w-8 left-4 top-16" aria-hidden="true">
+      <button onClick={handleArrowUpClick} className={buttonClassNames}>
+        <ChevronUpIcon className={iconClassNames} />
+      </button>
+      <svg
+        width="5"
+        height="100"
+        className="m-auto"
+      >
+        <motion.path
+          className="stroke-current text-gray-400"          
+          strokeWidth="8"
+          stroke="current"
+          d="M 0,0 L 0, 100"
+          style={{
+            pathLength: scrollYProgress
+          }}
+        />
+      </svg>
+      <button onClick={handleArrowDownClick} className={buttonClassNames}>
+        <ChevronDownIcon className={iconClassNames} />
+      </button>
     </div>
   )
 }
