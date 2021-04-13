@@ -92,7 +92,7 @@ export const Navbar: FunctionComponent = () => {
                     <Link href="/about"><a><p>About</p></a></Link>
                   </motion.li>
                   <motion.li variants={linkVariants} whileTap={{ scale: 0.9 }}>
-                    <a href="https:github.com/bbutner"><p className="flex justify-start items-center text-lg">
+                    <a href="https://github.com/bbutner"><p className="flex justify-start items-center text-lg">
                       <svg
                         viewBox="0 0 24 24"
                         className="w-6 h-6 fill-current mr-2"
@@ -103,7 +103,7 @@ export const Navbar: FunctionComponent = () => {
                       GitHub</p></a>
                   </motion.li>
                   <motion.li variants={linkVariants} whileTap={{ scale: 0.9 }}>
-                    <a href="https:www.linkedin.com/in/beau-butner-1491b7172/"><p className="flex justify-start items-center text-linkedin text-lg">
+                    <a href="https://www.linkedin.com/in/beau-butner-1491b7172/"><p className="flex justify-start items-center text-linkedin text-lg">
                       <svg
                         viewBox="0 0 24 24"
                         className="w-6 h-6 fill-current mr-2"
@@ -114,7 +114,7 @@ export const Navbar: FunctionComponent = () => {
                       LinkedIn</p></a>
                   </motion.li>
                   <motion.li variants={linkVariants} className="text-twitter" whileTap={{ scale: 0.9 }}>
-                    <a href="https:twitter.com/beaubutner"><p className="flex justify-start items-center text-lg">
+                    <a href="https://twitter.com/beaubutner"><p className="flex justify-start items-center text-lg">
                       <svg
                         viewBox="0 0 24 24"
                         className="w-6 h-6 fill-current mr-2"
