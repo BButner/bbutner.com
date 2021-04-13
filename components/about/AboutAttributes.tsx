@@ -32,7 +32,7 @@ export const AboutAttributes: FunctionComponent = () => {
   ]
 
   const attributeRef = useRef(null)
-  const THRESHOLD: number = 0.5
+  const THRESHOLD: number = 0.1
   const [animated, setAnimated] = useState<boolean>(false)
 
   const intersection = useIntersection(attributeRef, {

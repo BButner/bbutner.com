@@ -6,7 +6,7 @@ import { CheckIcon } from '@heroicons/react/outline'
 
 export const AboutEducation: FunctionComponent = () => {
   const educationRef = useRef(null)
-  const THRESHOLD: number = 0.5
+  const THRESHOLD: number = 0.1
   const [animated, setAnimated] = useState<boolean>(false)
 
   const intersection = useIntersection(educationRef, {
