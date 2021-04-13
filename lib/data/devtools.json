@@ -4,6 +4,7 @@
     { "title": "Visual Studio", "img": "/img/visualstudio.png" },
     { "title": "VSCode", "img": "/img/vscode.png" },
     { "title": "JIRA", "img": "/img/jira.png" },
-    { "title": "WebStorm", "img": "/img/webstorm.png" }
+    { "title": "WebStorm", "img": "/img/webstorm.png" },
+    { "title": "Figma", "img": "/img/figma.png" }
   ]
 }
