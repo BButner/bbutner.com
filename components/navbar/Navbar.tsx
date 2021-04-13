@@ -9,6 +9,7 @@ import { IconGithub, IconLinkedIn, IconTwitter } from '../../lib/util/Icons'
 
 export const Navbar: FunctionComponent = () => {
   const [navVisible, setNavVisible] = useState<boolean>(false)
+  const [scrollVisible, setScrollVisible] = useState<boolean>(false)
 
   const linkVariants = {
     hidden: {
@@ -25,14 +26,11 @@ export const Navbar: FunctionComponent = () => {
     }
   }
 
-  const handleBurgerClick = (): void => {
-    console.log(navVisible)
-    if (navVisible) {
-      setNavVisible(false)
-    } else {
-      setNavVisible(true)
+  useEffect(() => {
+    if (document.body.scrollHeight > window.innerHeight) {
+      setScrollVisible(true)
     }
-  }
+  }, [])
 
   return (
     <nav>
@@ -49,7 +47,7 @@ export const Navbar: FunctionComponent = () => {
         <div className={`h-1 w-8 ${navVisible ? 'bg-white' : 'bg-black'} rounded-full mb-2 m-auto`}></div>
         <div className={`h-1 w-8 ${navVisible ? 'bg-white' : 'bg-black'} rounded-full m-auto`}></div>
       </button>
-      <ScrollProgress />
+      {scrollVisible && <ScrollProgress />}
       <Transition
         show={navVisible}
         as={Fragment}
@@ -62,6 +60,17 @@ export const Navbar: FunctionComponent = () => {
           aria-label="Navigation Popup"
         >
           <div className="fixed z-40 overflow-hidden">
+            <Dialog.Overlay className="fixed inset-0 w-screen h-screen opacity-90">
+              <Transition.Child
+                className="fixed w-screen h-screen inset-0 bg-gray-200"
+                enter="transition duration-200"
+                enterFrom="opacity-0"
+                enterTo="opacity-100"
+                leave="transition duration-200"
+                leaveFrom="opacity-100"
+                leaveTo="opacity-0"
+              />
+            </Dialog.Overlay>
             <Transition.Child
               className="fixed top-0 left-0 w-64 h-screen bg-white shadow-2xl text-left text-3xl pt-16 pl-4 z-10"
               enter="transform transition duration-200"

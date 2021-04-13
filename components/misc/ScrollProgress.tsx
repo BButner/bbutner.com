@@ -1,5 +1,5 @@
 import { FunctionComponent } from 'react'
-import { motion, useCycle, useAnimation, useViewportScroll } from 'framer-motion'
+import { motion, useViewportScroll } from 'framer-motion'
 import { ChevronUpIcon, ChevronDownIcon } from '@heroicons/react/outline'
 import clsx from 'clsx'
 
