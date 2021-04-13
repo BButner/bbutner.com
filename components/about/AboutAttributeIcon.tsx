@@ -1,10 +1,11 @@
-import Icon from '@mdi/react'
-import { FunctionComponent } from 'react'
+import React, { FunctionComponent } from 'react'
 
 type AboutAttributeIconProps = {
-  icon: string;
+  Icon: React.FC;
 }
 
-export const AboutAttributeIcon: FunctionComponent<AboutAttributeIconProps> = ({ icon }) => {
-  return <div className="rounded-full p-3 bg-purple-400 text-white"><Icon path={icon} size={1} /></div>
+export const AboutAttributeIcon: FunctionComponent<AboutAttributeIconProps> = ({ Icon }) => {
+  return <div className="rounded-full p-3 bg-purple-500 text-white">
+    <Icon />
+  </div>
 }
