@@ -67,8 +67,8 @@ export const SectionSplashSquares: FunctionComponent = () => {
 
   return (
     <>
-      <motion.div initial="hidden" animate="visible" variants={topRectangleVariants} className="absolute w-screen h-screen bg-gradient-to-br from-blue-400 to-green-400 opacity-25" />
-      <motion.div initial="hidden" animate="visible" variants={bottomRectangleVariants} className="absolute w-screen h-screen bg-gradient-to-br from-red-400 to-purple-400 opacity-25" />
+      <motion.div initial="hidden" animate="visible" variants={topRectangleVariants} className="absolute w-screen h-screen bg-gradient-to-br from-blue-400 to-green-400 opacity-25 dark:opacity-75" />
+      <motion.div initial="hidden" animate="visible" variants={bottomRectangleVariants} className="absolute w-screen h-screen bg-gradient-to-br from-red-400 to-purple-400 opacity-25 dark:opacity-75" />
     </>
   )
 }

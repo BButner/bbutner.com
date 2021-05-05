@@ -6,6 +6,7 @@ import { ScrollProgress } from '../misc/ScrollProgress'
 import { Dialog, Transition } from '@headlessui/react'
 import clsx from 'clsx'
 import { IconGithub, IconLinkedIn, IconTwitter } from '../../lib/util/Icons'
+import { PageOptions } from '../pageoptions/PageOptions'
 
 export const Navbar: FunctionComponent = () => {
   const [navVisible, setNavVisible] = useState<boolean>(false)
@@ -43,9 +44,9 @@ export const Navbar: FunctionComponent = () => {
         )}
         aria-label="Open Navigation"
       >
-        <div className={`h-1 w-8 ${navVisible ? 'bg-white' : 'bg-black'} rounded-full mb-2 m-auto`}></div>
-        <div className={`h-1 w-8 ${navVisible ? 'bg-white' : 'bg-black'} rounded-full mb-2 m-auto`}></div>
-        <div className={`h-1 w-8 ${navVisible ? 'bg-white' : 'bg-black'} rounded-full m-auto`}></div>
+        <div className={`h-1 w-8 rounded-full mb-2 m-auto bg-black dark:bg-gray-200`}></div>
+        <div className={`h-1 w-8 rounded-full mb-2 m-auto bg-black dark:bg-gray-200`}></div>
+        <div className={`h-1 w-8 rounded-full m-auto bg-black dark:bg-gray-200`}></div>
       </button>
       {scrollVisible && <ScrollProgress />}
       <Transition
@@ -62,7 +63,7 @@ export const Navbar: FunctionComponent = () => {
           <div className="fixed z-40 overflow-hidden">
             <Dialog.Overlay className="fixed inset-0 w-screen h-screen opacity-90">
               <Transition.Child
-                className="fixed w-screen h-screen inset-0 bg-gray-200"
+                className="fixed w-screen h-screen inset-0 bg-gray-200 dark:bg-gray-900"
                 enter="transition duration-200"
                 enterFrom="opacity-0"
                 enterTo="opacity-100"
@@ -72,7 +73,7 @@ export const Navbar: FunctionComponent = () => {
               />
             </Dialog.Overlay>
             <Transition.Child
-              className="fixed top-0 left-0 w-64 h-screen bg-white shadow-2xl text-left text-3xl pt-16 pl-4 z-10"
+              className="fixed top-0 left-0 w-64 h-screen bg-white dark:bg-gray-900 shadow-2xl text-left text-3xl pt-16 pl-4 z-10 flex flex-col transition duration-200"
               enter="transform transition duration-200"
               enterFrom="-translate-x-full"
               enterTo="translate-x-0"
@@ -136,6 +137,8 @@ export const Navbar: FunctionComponent = () => {
                   </motion.li>
                 </motion.ul>
               </nav>
+              <div className="flex-1"></div>
+              <PageOptions />
             </Transition.Child>
           </div>
         </Dialog>

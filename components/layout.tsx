@@ -1,6 +1,5 @@
 import React, { FunctionComponent } from 'react'
 import { Meta } from './meta'
-import { ScrollProgress } from './misc/ScrollProgress'
 import { Navbar } from './navbar/Navbar'
 
 type LayoutProps = {
@@ -12,7 +11,6 @@ export const Layout: FunctionComponent<LayoutProps> = ({ pageTitle, children }) 
     <div>
       <Meta pageTitle={pageTitle} />
       <Navbar />
-      {/* <ScrollProgress /> */}
       {children}
     </div>
   )

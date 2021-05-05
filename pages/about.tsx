@@ -14,7 +14,7 @@ type AboutProps = {
 const about: FunctionComponent<AboutProps> = ({ technologies, devTools }) => {
   return (
     <Layout pageTitle="About">
-      <div className="w-3/4 md:w-2/3 m-auto text-gray-800 text-3xl md:text-4xl text-center md:text-left">
+      <div className="w-3/4 md:w-2/3 m-auto text-gray-800 dark:text-gray-200 text-3xl md:text-4xl text-center md:text-left">
         <p className="mt-32 text-5xl md:text-7xl mb-4">About Me</p>
         <div className="bg-gradient-to-br from-red-400 to-yellow-600 md:w-1/2 h-2 mb-10" />
         <AboutInfo />
