@@ -44,11 +44,11 @@ export const getStaticPaths = async () => {
 
 export const getStaticProps = async (context) => {
   const { slug } = context.params
-  const database: Page[] = await getDatabase(databaseId)
+  const database: any[] = await getDatabase(databaseId)
   const id: string = database.filter(page =>
     slugify(page.properties.Name.title[0].plain_text).toLowerCase() === slug.toLowerCase())[0].id
 
-  const pageMeta: Page = database.filter(page => page.id === id)[0]
+  const pageMeta: any = database.filter(page => page.id === id)[0]
 
   const title: string = pageMeta.properties.Name.title[0].plain_text
   const coverImageUrl: string = pageMeta.properties.CoverImage.rich_text[0].plain_text
