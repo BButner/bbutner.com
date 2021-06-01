@@ -2,7 +2,7 @@ import { FC } from 'react'
 import styles from './PostBodyMarkdown.module.sass'
 import BlockContent from '@sanity/block-content-to-react'
 import dynamic from 'next/dynamic'
-import { Post } from 'lib/model/Post'
+import { Post } from 'lib/blog/model/Post'
 
 type PostBodyProps = {
   post: Post;

@@ -1,4 +1,4 @@
-import { Post } from 'lib/model/Post'
+import { Post } from 'lib/blog/model/Post'
 import { FC } from 'react'
 import { PostPreview } from './PostPreview'
 
