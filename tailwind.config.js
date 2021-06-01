@@ -4,8 +4,8 @@ module.exports = {
   darkMode: 'class',
   mode: 'jit',
   purge: [
-    './components/**/*.tsx', 
-    './pages/**/*.tsx'
+    './components/**/*.{js,jsx,ts,tsx}', 
+    './pages/**/*.{js,jsx,ts,tsx}'
   ],
   theme: {
     extend: {
