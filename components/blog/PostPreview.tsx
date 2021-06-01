@@ -5,6 +5,10 @@ import Link from 'next/link'
 import { imageBuilder } from 'lib/blog/sanity'
 import { Date } from './Date'
 import clsx from 'clsx'
+import styles from './HeroPost.module.sass'
+import { Crosshairs } from './Crosshairs'
+import crosshairStyles from './Crosshairs.module.sass'
+import { motion } from 'framer-motion'
 
 type PostPreviewProps = {
   post: Post;
@@ -34,10 +38,14 @@ export const PostPreview: FC<PostPreviewProps> = ({ post }) => {
   }, [])
 
   return (
-    <div
+    <motion.div
       className={clsx(
-        'relative transition hover:bg-white'
+        'backdrop-filter backdrop-blur bg-white bg-opacity-50 hover:bg-opacity-80',
+        styles.hero,
+        crosshairStyles['crosshair-wrapper']
       )}
+      initial={{ opacity: 0, y: 100 }}
+      animate={{ opacity: 1, y: 0 }}
     >
       <Link as={`/blog/posts/${post.slug}`} href="/blog/posts/[slug]">
         <a aria-label={post.title}>
@@ -71,6 +79,8 @@ export const PostPreview: FC<PostPreviewProps> = ({ post }) => {
           </div>
         </a>
       </Link>
-    </div>
+
+      <Crosshairs />
+    </motion.div>
   )
 }

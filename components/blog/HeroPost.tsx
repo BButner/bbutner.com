@@ -6,6 +6,9 @@ import Image from 'next/image'
 import Link from 'next/link'
 import clsx from 'clsx'
 import { motion } from 'framer-motion'
+import styles from './HeroPost.module.sass'
+import { Crosshairs } from './Crosshairs'
+import crosshairStyles from './Crosshairs.module.sass'
 
 type HeroPostProps = {
   post: Post;
@@ -38,8 +41,12 @@ export const HeroPost: FC<HeroPostProps> = ({ post }) => {
     <section>
       <motion.div
         className={clsx(
-          'relative transition backdrop-filter backdrop-blur-md bg-white bg-opacity-20 hover:bg-opacity-100'
+          'relative backdrop-filter backdrop-blur bg-white bg-opacity-50 hover:bg-opacity-80',
+          styles.hero,
+          crosshairStyles['crosshair-wrapper']
         )}
+        initial={{ opacity: 0, y: 100 }}
+        animate={{ opacity: 1, y: 0 }}
       >
         <Link as={`/blog/posts/${post.slug}`} href="/blog/posts/[slug]">
           <a aria-label={post.title}>
@@ -73,6 +80,8 @@ export const HeroPost: FC<HeroPostProps> = ({ post }) => {
             </div>
           </a>
         </Link>
+
+        <Crosshairs />
       </motion.div>
     </section>
   )
