@@ -1,11 +1,12 @@
+import { SanityClient } from '@sanity/client'
+import { Post } from './model/Post'
 import client, { previewClient } from './sanity'
 
-const getUniquePosts = (posts) => {
+const getUniquePosts = (posts: Post[]): Post[] => {
   const slugs = new Set()
   return posts.filter((post) => {
-    if (slugs.has(post.slug)) {
-      return false
-    } else {
+    if (slugs.has(post.slug)) return false
+    else {
       slugs.add(post.slug)
       return true
     }
@@ -24,33 +25,32 @@ const postFields = `
   description,
 `
 
-const getClient = (preview) => (preview ? previewClient : client)
+const getClient = (preview): SanityClient => (preview ? previewClient : client)
 
-export async function getPreviewPostBySlug(slug) {
-  const data = await getClient(true).fetch(
+export const getPreviewPostBySlug = async (slug: string): Promise<Post> => {
+  return await getClient(true).fetch(
     `*[_type == "post" && slug.current == $slug]${process.env.NODE_ENV == 'production' ? '[draft == false]' : ''} | order(publishedAt desc){
       ${postFields}
       body
     }`,
     { slug }
+  )[0]
+}
+
+export const getAllPostsWithSlug = async (): Promise<Post[]> => {
+  return await client.fetch(`*[_type == "post"]${process.env.NODE_ENV == 'production' ? '[draft == false]' : ''}{ 'slug': slug.current }`)
+}
+
+export const getAllPostsForHome = async (preview): Promise<Post[]> => {
+  return getUniquePosts(
+    await getClient(preview)
+      .fetch(`*[_type == "post"]${process.env.NODE_ENV == 'production' ? '[draft == false]' : ''} | order(publishedAt desc){
+        ${postFields}
+      }`)
   )
-  return data[0]
 }
 
-export async function getAllPostsWithSlug() {
-  const data = await client.fetch(`*[_type == "post"]${process.env.NODE_ENV == 'production' ? '[draft == false]' : ''}{ 'slug': slug.current }`)
-  return data
-}
-
-export async function getAllPostsForHome(preview) {
-  const results = await getClient(preview)
-    .fetch(`*[_type == "post"]${process.env.NODE_ENV == 'production' ? '[draft == false]' : ''} | order(publishedAt desc){
-      ${postFields}
-    }`)
-  return getUniquePosts(results)
-}
-
-export async function getPostAndMorePosts(slug, preview) {
+export const getPostAndMorePosts = async (slug: string, preview) => {
   const curClient = getClient(preview)
   const [post, morePosts] = await Promise.all([
     curClient.fetch(
