@@ -33,5 +33,5 @@ const BlockRenderer = (props) => {
 export const PostBody: FC<PostBodyProps> = ({ post }) => {
   slug = post.slug
 
-  return <div className="px-10"><BlockContent blocks={post.body} serializers={{ types: { block: BlockRenderer } }} className={styles.markdown} /></div>
+  return <div className="px-10 text-gray-900 dark:text-gray-200"><BlockContent blocks={post.body} serializers={{ types: { block: BlockRenderer } }} className={styles.markdown} /></div>
 }

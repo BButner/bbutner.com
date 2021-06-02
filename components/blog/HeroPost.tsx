@@ -41,7 +41,7 @@ export const HeroPost: FC<HeroPostProps> = ({ post }) => {
     <section>
       <motion.div
         className={clsx(
-          'relative backdrop-filter backdrop-blur bg-white bg-opacity-50 hover:bg-opacity-80',
+          'relative backdrop-filter backdrop-blur bg-white dark:bg-gray-800 bg-opacity-50 hover:bg-opacity-60',
           styles.hero,
           crosshairStyles['crosshair-wrapper']
         )}
