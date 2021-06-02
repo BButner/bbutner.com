@@ -25,7 +25,7 @@ const item = {
 export const MorePosts: FC<MorePostProps> = ({ posts }) => {
   return (
     <section>
-      <h2 className="py-20 text-4xl md:text-5xl font-bold tracking-tighter leading-tight">More Posts</h2>
+      <h2 className="py-20 text-4xl md:text-5xl tracking-tighter leading-tight">More Posts</h2>
       <motion.ul className="grid grid-cols-1 md:grid-cols-2 md:gap-6" initial="hidden" animate="visible" variants={container}>
         {posts.map(post => (
           <motion.li variants={item} key={post._id}>
