@@ -27,6 +27,8 @@ const BlockRenderer = (props) => {
         return <InjectedComponent key={index} />
       } else return <p key={index}>❌ Component name not found</p>
     })}</>
+  } else if (style === 'blockquote') {
+    return <blockquote className="dark:bg-gray-700">{props.children.join('')}</blockquote>
   } else return BlockContent.defaultSerializers.types.block(props)
 }
 
