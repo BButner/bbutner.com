@@ -38,14 +38,12 @@ export const PostPreview: FC<PostPreviewProps> = ({ post }) => {
   }, [])
 
   return (
-    <motion.div
+    <div
       className={clsx(
         'backdrop-filter backdrop-blur bg-white bg-opacity-50 hover:bg-opacity-80',
         styles.hero,
         crosshairStyles['crosshair-wrapper']
       )}
-      initial={{ opacity: 0, y: 100 }}
-      animate={{ opacity: 1, y: 0 }}
     >
       <Link as={`/blog/posts/${post.slug}`} href="/blog/posts/[slug]">
         <a aria-label={post.title}>
@@ -81,6 +79,6 @@ export const PostPreview: FC<PostPreviewProps> = ({ post }) => {
       </Link>
 
       <Crosshairs />
-    </motion.div>
+    </div>
   )
 }
