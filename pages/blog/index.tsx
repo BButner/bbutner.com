@@ -37,12 +37,6 @@ const index: FC<IndexProps> = ({ allPosts, preview }) => {
               width: 1200,
               height: 630,
               alt: allPosts[0] ? 'Cover Image for ' + allPosts[0].title : 'Beau Butner'
-            },
-            {
-              url: !allPosts[0] ? '/img/avatar_small.png' : '',
-              width: 300,
-              height: 300,
-              alt: 'Beau Butner Avatar'
             }
           ],
         }}
