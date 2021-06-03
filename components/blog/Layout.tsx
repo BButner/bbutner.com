@@ -1,5 +1,5 @@
 import { FC, useEffect } from 'react'
-import Meta from './meta'
+import { Meta } from './Meta'
 import { Footer } from './Footer'
 import { BGSquare } from './BGSquare'
 import { Navbar } from 'components/navbar/Navbar'
