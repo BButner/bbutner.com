@@ -38,4 +38,4 @@ const Index: FunctionComponent = () => {
   )
 }
 
-export default index
+export default Index
