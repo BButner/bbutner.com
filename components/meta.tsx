@@ -10,8 +10,9 @@ export const Meta: FunctionComponent<MetaProps> = ({ pageTitle }) => {
     <Head>
       <meta
         name="Beau Butner"
-        content="Personal Portfolio Website" />
-        <title>{pageTitle}</title>
+        content="Personal Portfolio Website"
+      />
+      <title>{pageTitle}</title>
     </Head>
   )
 }
