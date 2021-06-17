@@ -2,6 +2,7 @@ import { FC, useEffect, useState } from 'react'
 import { ImageBlur } from 'components/blog/misc/ImageBlur'
 import { Date } from '../Date'
 import { Post } from 'lib/blog/model/Post'
+import Image from 'next/image'
 
 type PostHeaderProps = {
   post: Post;
