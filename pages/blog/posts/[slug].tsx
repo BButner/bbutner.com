@@ -18,8 +18,8 @@ type SlugProps = {
 }
 
 export const Slug: FC<SlugProps> = ({ post, morePosts, preview }) => {
-  if (!post) return <Error statusCode={404} />
   const router = useRouter()
+  if (!post) return <Error statusCode={404} />
 
   return (
     <Layout preview={preview}>

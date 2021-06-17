@@ -16,7 +16,7 @@ type IndexProps = {
   preview: any;
 }
 
-const index: FC<IndexProps> = ({ allPosts, preview }) => {
+const Index: FC<IndexProps> = ({ allPosts, preview }) => {
   const heroPost: Post | undefined = allPosts[0]
   const router: NextRouter = useRouter()
 
@@ -61,7 +61,7 @@ const index: FC<IndexProps> = ({ allPosts, preview }) => {
   )
 }
 
-export default index
+export default Index
 
 export async function getStaticProps({ preview = false }) {
   const allPosts = await getAllPostsForHome(preview)

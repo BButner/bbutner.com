@@ -19,15 +19,15 @@ export const PostPreview: FC<PostPreviewProps> = ({ post, hero }) => {
   const IMAGE_HEIGHT_DEFAULT: number = 350
   const [imageHeight, setImageHeight] = useState<number>(IMAGE_HEIGHT_DEFAULT)
 
-  const handleResize = (): void => {
-    if (window.innerWidth <= 768) {
-      setImageHeight(hero ? 500 : 400)
-    } else {
-      setImageHeight(IMAGE_HEIGHT_DEFAULT)
-    }
-  }
-
   useEffect(() => {
+    const handleResize = (): void => {
+      if (window.innerWidth <= 768) {
+        setImageHeight(hero ? 500 : 400)
+      } else {
+        setImageHeight(IMAGE_HEIGHT_DEFAULT)
+      }
+    }
+
     window.addEventListener('resize', handleResize)
 
     if (window.innerWidth <= 768) handleResize()
@@ -35,7 +35,7 @@ export const PostPreview: FC<PostPreviewProps> = ({ post, hero }) => {
     return function cleanup (): void {
       window.removeEventListener('resize', handleResize)
     }
-  }, [])
+  }, [hero])
 
   return (
     <div
@@ -70,7 +70,7 @@ export const PostPreview: FC<PostPreviewProps> = ({ post, hero }) => {
                 height={64}
                 src={post.author.picture}
                 className="rounded-full"
-                
+                alt={`Avatar for author ${post.author.name}`}
               />
               <h3 className="text-2xl">{post.author.name}</h3>
             </div>

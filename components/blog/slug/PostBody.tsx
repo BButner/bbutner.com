@@ -10,7 +10,7 @@ type PostBodyProps = {
 
 let slug: string = ''
 
-const getDynamicComponent = (name: string) => dynamic(() => import(`./post_specific/${slug}/${name}`).catch(err => () => <p>❌ Component not found.</p>), { ssr: false })
+const getDynamicComponent = (name: string) => dynamic(() => import(`./post_specific/${slug}/${name}`).catch(err => <p>❌ Component not found.</p>), { ssr: false })
 
 const componentRegEx: RegExp = new RegExp(/<Component::(.*?)\/>/)
 

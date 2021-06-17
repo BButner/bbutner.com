@@ -35,7 +35,7 @@ export const AboutDevTools: FunctionComponent = () => {
       <motion.li variants={devToolsVariants} className="mb-8"><p>These are the development tools that I regularly use:</p></motion.li>
       {devTools.devTools.map(tool => {
         return <motion.li className="text-xl md:text-2xl flex space-x-4 items-center ml-6" key={tool.title} variants={devToolsVariants}>
-          <Image src={tool.img} height={32} width={32} />
+          <Image src={tool.img} height={32} width={32} alt={`Icon for ${tool.title}`} />
           <p>{tool.title}</p>
         </motion.li>
       })}

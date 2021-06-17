@@ -40,6 +40,7 @@ export const PostHeader: FC<PostHeaderProps> = ({ post }) => {
         priority={true}
         src={post.coverImage}
         quality={100}
+        alt={`Cover Image for ${post.title}`}
       />
       <div className="hidden md:flex items-center justify-between mx-2 md:mx-10 md:-mt-16 relative">
         <div className="space-x-6 flex items-center">
@@ -50,6 +51,7 @@ export const PostHeader: FC<PostHeaderProps> = ({ post }) => {
               src={post.author.picture}
               layout="responsive"
               className="rounded-full"
+              alt={`Avatar for author ${post.author.name}`}
             />
           </div>
           <h2 className="bg-gray-100 dark:bg-gray-900 py-2 px-4">{post.author.name}</h2>
@@ -64,6 +66,7 @@ export const PostHeader: FC<PostHeaderProps> = ({ post }) => {
             src={post.author.picture}
             layout="responsive"
             className="rounded-full"
+            alt={`Avatar for author ${post.author.name}`}
           />
         </div>
         <div>

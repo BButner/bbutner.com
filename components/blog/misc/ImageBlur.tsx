@@ -11,6 +11,7 @@ type ImageBlurProps = {
   src: any;
   quality?: number;
   className?: string;
+  alt: string;
 }
 
 export const ImageBlur: FC<ImageBlurProps> = (props) => {
@@ -43,6 +44,7 @@ export const ImageBlur: FC<ImageBlurProps> = (props) => {
           priority={props.priority}
           className={props.className}
           quality={1}
+          alt={props.alt}
         />
       </div>}
       {/* High-res Image */}
@@ -58,6 +60,7 @@ export const ImageBlur: FC<ImageBlurProps> = (props) => {
         onLoad={(): void => setBlur(false)}
         quality={props.quality}
         className={props.className}
+        alt={props.alt}
       />
     </div>
   )
