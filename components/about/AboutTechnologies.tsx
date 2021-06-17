@@ -35,7 +35,7 @@ export const AboutTechnologies: FunctionComponent = () => {
         <motion.li variants={techVariants} className="mb-8"><p>These are the development technologies that I am familiar with:</p></motion.li>
         {technologies.technologies.map((tech, index) => {
           return <motion.li key={tech.title} className="text-xl md:text-2xl flex space-x-4 items-center ml-6" variants={techVariants}>
-            <Image src={tech.img} height={32} width={32} />
+            <Image src={tech.img} height={32} width={32} alt={`Icon for ${tech.title}`} />
             <p>{tech.title}</p>
           </motion.li>
         })}

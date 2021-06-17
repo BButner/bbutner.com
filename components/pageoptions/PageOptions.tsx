@@ -32,8 +32,7 @@ export const PageOptions: FC = () => {
     } else if (darkModeSetting.setting === DARK_MODE_OPTION.light && html.classList.contains('dark')) {
       html.classList.remove('dark')
       localStorage.theme = 'light'
-    } else if (darkModeSetting.setting === DARK_MODE_OPTION.auto) {
-      localStorage.removeItem('theme')
+    } else if (darkModeSetting.setting === DARK_MODE_OPTION.auto && !window.matchMedia('(prefers-color-scheme: dark)').matches) {
       html.classList.remove('dark')
     }
   })

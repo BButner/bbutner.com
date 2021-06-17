@@ -38,7 +38,7 @@ export const Navbar: FunctionComponent = () => {
       <button
         onClick={(): void => setNavVisible(!navVisible)}
         className={clsx(
-          "w-8 h-8 fixed mb-4 m-auto z-40 mt-4 ml-4 top-0 left-0",
+          "w-8 h-8 fixed mb-4 m-auto z-40 bg-white/70 dark:bg-black/40 rounded backdrop-filter backdrop-blur mt-1 ml-1 md:mt-4 md:ml-4 md:backdrop-filter-none md:bg-transparent top-0 left-0",
           styles['hamburger-wrapper'],
           navVisible ? styles['hamburger-wrapper-open'] : ''
         )}
@@ -102,6 +102,9 @@ export const Navbar: FunctionComponent = () => {
                   <motion.li variants={linkVariants}>
                     <Link href="/about"><a><p>About</p></a></Link>
                   </motion.li>
+                  {process.env.NODE_ENV == 'production' && <motion.li variants={linkVariants}>
+                    <Link href="/blog"><a><p>Blog</p></a></Link>
+                  </motion.li>}
                   <motion.li variants={linkVariants} whileTap={{ scale: 0.9 }}>
                     <a href="https://github.com/bbutner"><p className="flex justify-start items-center text-lg">
                       <svg

@@ -22,7 +22,7 @@ export const ScrollProgress: FunctionComponent = () => {
   )
 
   return (
-    <div className="fixed w-8 left-4 top-16" aria-hidden="true">
+    <div className="hidden md:fixed z-50 w-8 left-4 top-16" aria-hidden="true">
       <button onClick={handleArrowUpClick} className={buttonClassNames}>
         <ChevronUpIcon className={iconClassNames} />
       </button>

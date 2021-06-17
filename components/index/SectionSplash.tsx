@@ -3,6 +3,7 @@ import { FunctionComponent } from 'react'
 import { SectionSplashSquares } from './SectionSplashSquares'
 import { LightningBoltIcon } from '@heroicons/react/solid'
 import styles from './SectionSplash.module.sass'
+import Image from 'next/image'
 
 export const SectionSplash: FunctionComponent = () => {
   const nameDelay: number = 0.07
@@ -37,10 +38,18 @@ export const SectionSplash: FunctionComponent = () => {
     <main className="w-screen h-screen flex items-center justify-center relative overflow-hidden">
       <SectionSplashSquares />
       <div className="z-40 space-y-4 md:space-y-8">
-        <img className="w-32 h-32 md:w-52 md:h-52 rounded-full m-auto" src="/img/avatar_small.png" alt="Beau Butner Avatar" />
+        <div className="flex justify-center">
+          <Image
+            className="rounded-full m-auto block"
+            src="/img/avatar_small.png"
+            alt="Beau Butner Avatar"
+            width={150}
+            height={150}
+          />
+        </div>
         <motion.div className="flex justify-center text-center text-4xl md:text-8xl dark:text-gray-100" variants={titleVariants}>
           <div className={styles['emoji-wave']} aria-hidden="true">👋</div>
-          <h1><span aria-hidden="true">, </span>I'm Beau Butner</h1>
+          <h1 className="text-4xl md:text-8xl"><span aria-hidden="true">, </span>I&apos;m Beau Butner</h1>
         </motion.div>
         <motion.ul initial="hidden" animate="visible" variants={positionVariants} className="flex justify-center space-x-2 md:space-x-8 text-xl text-center md:text-5xl text-gray-800 dark:text-gray-300">
           <motion.li variants={positionVariants}>Senior Systems Analyst</motion.li>

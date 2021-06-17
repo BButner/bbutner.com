@@ -1,4 +1,5 @@
 import '../styles/global.sass'
+import '../styles/prismjs.css'
 import React, { useEffect } from 'react'
 import { DARK_MODE_OPTION } from '../components/pageoptions/PageOptions'
 
