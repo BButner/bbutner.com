@@ -102,7 +102,7 @@ export const Navbar: FunctionComponent = () => {
                   <motion.li variants={linkVariants}>
                     <Link href="/about"><a><p>About</p></a></Link>
                   </motion.li>
-                  {process.env.NODE_ENV == 'production' && <motion.li variants={linkVariants}>
+                  {process.env.NODE_ENV !== 'production' && <motion.li variants={linkVariants}>
                     <Link href="/blog"><a><p>Blog</p></a></Link>
                   </motion.li>}
                   <motion.li variants={linkVariants} whileTap={{ scale: 0.9 }}>
