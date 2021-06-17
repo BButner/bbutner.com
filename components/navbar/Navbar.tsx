@@ -38,7 +38,7 @@ export const Navbar: FunctionComponent = () => {
       <button
         onClick={(): void => setNavVisible(!navVisible)}
         className={clsx(
-          "w-8 h-8 fixed mb-4 m-auto z-40 bg-white bg-opacity-70 rounded backdrop-filter backdrop-blur mt-1 ml-1 md:mt-4 md:ml-4 md:backdrop-filter-none md:bg-transparent top-0 left-0",
+          "w-8 h-8 fixed mb-4 m-auto z-40 bg-white/70 dark:bg-black/40 rounded backdrop-filter backdrop-blur mt-1 ml-1 md:mt-4 md:ml-4 md:backdrop-filter-none md:bg-transparent top-0 left-0",
           styles['hamburger-wrapper'],
           navVisible ? styles['hamburger-wrapper-open'] : ''
         )}
