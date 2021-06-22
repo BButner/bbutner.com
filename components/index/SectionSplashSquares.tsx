@@ -41,34 +41,34 @@ export const SectionSplashSquares: FunctionComponent = () => {
 
   const topRectangleVariants = {
     hidden: {
-      top: '-100%',
-      left: '-100%',
+      y: '-100%',
+      x: '-100%',
       rotate: -90
     },
     visible: {
-      top: rectTopTop,
-      left: rectTopLeft,
+      y: rectTopTop,
+      x: rectTopLeft,
       rotate: -45
     }
   }
 
   const bottomRectangleVariants = {
     hidden: {
-      top: '100%',
-      left: '100%',
+      y: '100%',
+      x: '100%',
       rotate: 90
     },
     visible: {
-      top: rectBottomTop,
-      left: rectBottomLeft,
+      y: rectBottomTop,
+      x: rectBottomLeft,
       rotate: 45
     }
   }
 
   return (
     <>
-      <motion.div initial="hidden" animate="visible" variants={topRectangleVariants} className="absolute w-screen h-screen bg-gradient-to-br from-blue-400 to-green-400 opacity-25 dark:opacity-75" />
-      <motion.div initial="hidden" animate="visible" variants={bottomRectangleVariants} className="absolute w-screen h-screen bg-gradient-to-br from-red-400 to-purple-400 opacity-25 dark:opacity-75" />
+      <motion.div initial="hidden" animate="visible" variants={topRectangleVariants} className="absolute w-screen h-screen bg-gradient-to-br from-blue-400 to-green-400 opacity-25 dark:opacity-75 top-0 left-0" />
+      <motion.div initial="hidden" animate="visible" variants={bottomRectangleVariants} className="absolute w-screen h-screen bg-gradient-to-br from-red-400 to-purple-400 opacity-25 dark:opacity-75 top-0 right-0" />
     </>
   )
 }
