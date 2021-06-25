@@ -15,7 +15,7 @@ const about: FunctionComponent<AboutProps> = ({ technologies, devTools }) => {
   return (
     <Layout pageTitle="About">
       <div className="w-3/4 md:w-2/3 m-auto text-gray-800 dark:text-gray-200 text-3xl md:text-4xl text-center md:text-left">
-        <p className="mt-32 text-5xl md:text-7xl mb-4">About Me</p>
+        <p className="pt-32 text-5xl md:text-7xl mb-4">About Me</p>
         <div className="bg-gradient-to-br from-red-400 to-yellow-600 md:w-1/2 h-2 mb-10" />
         <AboutInfo />
         <br />
@@ -27,7 +27,7 @@ const about: FunctionComponent<AboutProps> = ({ technologies, devTools }) => {
         <br />
         <AboutDevTools />
         <br />
-        <div className="mt-8 mb-20 w-full">
+        <div className="mt-8 pb-20 w-full">
           <p>Want to get in touch with me? Shoot me an email at <span className="text-purple-500"><a href="mailto:beau@bbutner.com">beau@bbutner.com</a></span>!</p>
         </div>
       </div>
