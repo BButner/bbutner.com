@@ -52,7 +52,7 @@ export const SectionSplash: FunctionComponent = () => {
           <h1 className="text-4xl md:text-8xl"><span aria-hidden="true">, </span>I&apos;m Beau Butner</h1>
         </motion.div>
         <motion.ul initial="hidden" animate="visible" variants={positionVariants} className="flex justify-center items-center space-x-2 md:space-x-8 text-xl text-center md:text-5xl text-gray-800 dark:text-gray-300">
-          <motion.li variants={positionVariants}>Senior Systems Analyst</motion.li>
+          <motion.li variants={positionVariants}>Software Engineer</motion.li>
           <motion.li variants={positionVariants} className="flex items-center justify-center text-yellow-400"><LightningBoltIcon className="w-6 h-6" /></motion.li>
           <motion.li variants={positionVariants}>UI/UX Engineer</motion.li>
           <motion.li variants={positionVariants} className="flex items-center justify-center text-yellow-400"><LightningBoltIcon className="w-6 h-6" /></motion.li>
