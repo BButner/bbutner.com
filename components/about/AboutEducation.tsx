@@ -28,7 +28,7 @@ export const AboutEducation: FunctionComponent = () => {
       <p>My education is as follows:</p>
       <motion.li variants={educationVariants} className="md:flex md:justify-between md:items-center text-xl md:text-2xl mb-4 mt-8 md:ml-6">
         <p className="md:flex text-gray-700 dark:text-gray-300 items-center"><CheckIcon className="hidden md:block text-green-500 md:mr-4 w-8 h-8" />Danville Area Community College</p>
-        <p>Associates in Applied Aciences</p>
+        <p>Associates in Applied Sciences</p>
         <p className="text-gray-500">2016-2018</p>
       </motion.li>
       <motion.li variants={educationVariants} className="md:flex md:justify-between md:items-center text-xl md:text-2xl md:ml-6">
