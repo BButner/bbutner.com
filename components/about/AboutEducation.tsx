@@ -2,7 +2,7 @@ import { FunctionComponent, useRef, useState } from 'react'
 import { motion } from 'framer-motion'
 import { motionFadeInX } from '../../lib/util/GenericAnimations'
 import { useIntersection } from 'react-use'
-import { CheckIcon } from '@heroicons/react/outline'
+import { CheckIcon } from '@heroicons/react/24/solid'
 
 export const AboutEducation: FunctionComponent = () => {
   const educationRef = useRef(null)

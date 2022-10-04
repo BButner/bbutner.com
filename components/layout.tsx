@@ -4,6 +4,7 @@ import { Navbar } from './navbar/Navbar'
 
 type LayoutProps = {
   pageTitle: string;
+  children: React.ReactNode;
 }
 
 export const Layout: FunctionComponent<LayoutProps> = ({ pageTitle, children }) => {

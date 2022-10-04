@@ -1,9 +1,9 @@
 import { motion } from 'framer-motion'
 import { FunctionComponent } from 'react'
 import { SectionSplashSquares } from './SectionSplashSquares'
-import { LightningBoltIcon } from '@heroicons/react/solid'
 import styles from './SectionSplash.module.sass'
 import Image from 'next/image'
+import { BoltIcon } from "@heroicons/react/24/solid"
 
 export const SectionSplash: FunctionComponent = () => {
   const nameDelay: number = 0.07
@@ -53,9 +53,9 @@ export const SectionSplash: FunctionComponent = () => {
         </motion.div>
         <motion.ul initial="hidden" animate="visible" variants={positionVariants} className="flex justify-center items-center space-x-2 md:space-x-8 text-xl text-center md:text-5xl text-gray-800 dark:text-gray-300">
           <motion.li variants={positionVariants}>Software Engineer</motion.li>
-          <motion.li variants={positionVariants} className="flex items-center justify-center text-yellow-400"><LightningBoltIcon className="w-6 h-6" /></motion.li>
+          <motion.li variants={positionVariants} className="flex items-center justify-center text-yellow-400"><BoltIcon className="w-6 h-6" /></motion.li>
           <motion.li variants={positionVariants}>UI/UX Engineer</motion.li>
-          <motion.li variants={positionVariants} className="flex items-center justify-center text-yellow-400"><LightningBoltIcon className="w-6 h-6" /></motion.li>
+          <motion.li variants={positionVariants} className="flex items-center justify-center text-yellow-400"><BoltIcon className="w-6 h-6" /></motion.li>
           <motion.li variants={positionVariants}>Backend Developer</motion.li>
         </motion.ul>
       </div>

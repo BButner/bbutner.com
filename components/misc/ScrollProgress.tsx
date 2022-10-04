@@ -1,7 +1,7 @@
 import { FunctionComponent } from 'react'
 import { motion, useViewportScroll } from 'framer-motion'
-import { ChevronUpIcon, ChevronDownIcon } from '@heroicons/react/outline'
 import clsx from 'clsx'
+import { ChevronDownIcon, ChevronUpIcon } from '@heroicons/react/24/solid'
 
 export const ScrollProgress: FunctionComponent = () => {
   const { scrollYProgress } = useViewportScroll()

@@ -1,5 +1,5 @@
 // import { mdiTimer, mdiFire, mdiPencil, mdiMagnify, mdiAccountMultiple, mdiMicrophone, mdiBrain } from '@mdi/js'
-import { ClockIcon, FireIcon, PencilIcon, SearchIcon, UserGroupIcon, MicrophoneIcon, ChipIcon } from '@heroicons/react/outline'
+import { ClockIcon, FireIcon, PencilIcon, MagnifyingGlassIcon, UserGroupIcon, MicrophoneIcon, CpuChipIcon } from '@heroicons/react/24/solid'
 import { FunctionComponent, useRef, useState } from 'react'
 import { motionFadeInX } from '../../lib/util/GenericAnimations'
 import { AboutAttributeIcon } from './AboutAttributeIcon'
@@ -16,10 +16,10 @@ export const AboutAttributes: FunctionComponent = () => {
   const Clock: React.FC = () => <ClockIcon className={iconClass} />
   const Fire: React.FC = () => <FireIcon className={iconClass} />
   const Pencil: React.FC = () => <PencilIcon className={iconClass} />
-  const Search: React.FC = () => <SearchIcon className={iconClass} />
+  const Search: React.FC = () => <MagnifyingGlassIcon className={iconClass} />
   const UserGroup: React.FC = () => <UserGroupIcon className={iconClass} />
   const Microphone: React.FC = () => <MicrophoneIcon className={iconClass} />
-  const Chip: React.FC = () => <ChipIcon className={iconClass} />
+  const Chip: React.FC = () => <CpuChipIcon className={iconClass} />
 
   const attributes: Attribute[] = [
     { description: "Quick and Efficient", icon: Clock },

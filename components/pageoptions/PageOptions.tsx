@@ -1,5 +1,5 @@
 import { Listbox, Transition } from '@headlessui/react'
-import { CheckIcon, SelectorIcon } from '@heroicons/react/outline'
+import { CheckIcon, ChevronUpDownIcon } from '@heroicons/react/24/solid';
 import clsx from 'clsx'
 import { FC, useEffect, useState } from 'react'
 
@@ -50,7 +50,7 @@ export const PageOptions: FC = () => {
               )}
             >
               {darkModeSetting.name}
-              <SelectorIcon className="w-5 h-5 text-gray-400" />
+              <ChevronUpDownIcon className="w-5 h-5 text-gray-400" />
             </Listbox.Button>
             <Transition
               show={open}
