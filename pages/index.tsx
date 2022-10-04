@@ -10,13 +10,13 @@ const Index: FunctionComponent = () => {
   return (
     <Layout pageTitle="Beau Butner">
       <NextSeo
-        title="BButner - Blog"
-        description="My personal blog for tech."
+        title="BButner - Portfolio"
+        description="My personal portfolio website."
         openGraph={{
           url: router.asPath,
           type: 'website',
-          title: 'Beau Butner - Blog',
-          description: 'My personal blog for tech.',
+          title: 'Beau Butner - Portfolio',
+          description: 'My personal portfolio website.',
           locale: 'en_US',
           images: [
             {
