@@ -61,7 +61,9 @@ export const Navbar: FunctionComponent = () => {
           aria-label="Navigation Popup"
         >
           <div className="fixed z-40 overflow-hidden">
-            <Dialog.Overlay className="fixed inset-0 w-screen h-full opacity-90">
+            <Dialog.Overlay 
+              onClick={(): void => setNavVisible(false)}
+              className="fixed inset-0 w-screen h-full opacity-90">
               <Transition.Child
                 className="fixed w-screen h-screen inset-0 bg-gray-200 dark:bg-gray-900"
                 enter="transition duration-200"
