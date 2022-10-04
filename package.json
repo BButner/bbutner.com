@@ -4,12 +4,8 @@
   "private": true,
   "scripts": {
     "dev": "next",
-    "build": "npm run build:sanity && pwd && npm run build:web",
-    "build:web": "next build",
-    "start:web": "next start",
-    "build:sanity": "cd studio && sanity build ../public/studio -y && cd ..",
-    "start:sanity": "cp .env ./studio/.env.development && cd studio && sanity start",
-    "postinstall": "lerna bootstrap"
+    "build": "next build",
+    "start": "next start"
   },
   "dependencies": {
     "@headlessui/react": "^1.2.0",
